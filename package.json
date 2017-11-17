@@ -1,0 +1,20 @@
+{
+  "name": "yarn4640-b",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/amitic/yarn4640-b.git",
+  "author": "Aleksandar Mitic <amitic@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist && mkdir dist",
+    "postinstall": "yarn run clean && yarn run build",
+    "build": "cpx index.js dist"
+  },
+  "dependencies": {
+    "yarn4640-b": "git://github.com/amitic/yarn4640-b.git"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "rimraf": "^2.6.2"
+  }
+}
